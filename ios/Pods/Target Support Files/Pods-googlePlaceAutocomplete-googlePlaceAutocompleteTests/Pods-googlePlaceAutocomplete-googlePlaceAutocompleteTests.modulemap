@@ -1,0 +1,6 @@
+module Pods_googlePlaceAutocomplete_googlePlaceAutocompleteTests {
+  umbrella header "Pods-googlePlaceAutocomplete-googlePlaceAutocompleteTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

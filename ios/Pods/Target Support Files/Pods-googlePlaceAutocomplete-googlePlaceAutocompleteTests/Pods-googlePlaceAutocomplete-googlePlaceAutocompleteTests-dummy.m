@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_googlePlaceAutocomplete_googlePlaceAutocompleteTests : NSObject
+@end
+@implementation PodsDummy_Pods_googlePlaceAutocomplete_googlePlaceAutocompleteTests
+@end
