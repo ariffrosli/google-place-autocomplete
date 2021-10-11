@@ -15,10 +15,17 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 const ListPlaceScreen = ({ removePlaces, searchItems }) =>{
+  const [stateSearchItems, setStateSearchItems] = useState(searchItems);
 
+  const onDeleteClick = (selectedItem) => {
+    console.log(searchItems)
+    // // let updatedSearchItems = searchItems.filter(x => x.id !== selectedItem.id);
+    // // setStateSearchItems(updatedSearchItems);
+    // removePlaces(selectedItem);
+  };
   return (
     <View>
-        <Text>* Long Press to Delete Places</Text>
+        {/* <Text>* Long Press to Delete Places</Text> */}
         <FlatList
             data={searchItems}
             keyExtractor={(item) => item.id}
@@ -27,7 +34,7 @@ const ListPlaceScreen = ({ removePlaces, searchItems }) =>{
             renderItem={({ item }) => (
                 <ListText
                     name={`Place: ${item.name}`}
-                    onLongPress={() => Alert.alert(JSON.stringify(searchItems))}
+                    onLongPress={() => onDeleteClick(item)}
                 />
             )}
         />

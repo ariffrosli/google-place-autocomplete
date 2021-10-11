@@ -1,4 +1,4 @@
-import { SAVE_PLACE } from "./actionConstant";
+import { SAVE_PLACE, REMOVE_PLACE } from "./actionConstant";
 
 export const savePlaces = (content) => ({
     type: SAVE_PLACE,
@@ -8,6 +8,6 @@ export const savePlaces = (content) => ({
 });
 
 export const removePlaces = (content) => ({
-    type: 'REMOVE_PLACES',
+    type: REMOVE_PLACE,
     payload: content
 });

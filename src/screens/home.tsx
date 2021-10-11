@@ -34,7 +34,7 @@ const showNewPlaceToast = (message) => {
     ToastAndroid.show(message, ToastAndroid.SHORT);
 };
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation, savePlaces }) => {
     const [search, setSearch] = useState({ term: '', fetchPredictions: false })
     const [showPredictions, setShowPredictions] = useState(false)
     const [predictions, setPredictions] = useState<PredictionType[]>([])
@@ -87,7 +87,6 @@ const HomeScreen = ({ navigation }) => {
     }
 
     const onSaveClick = () => {
-        console.log(search)
         if (validateInputForm()) {
             savePlaces(search);
             showNewPlaceToast('Successfully save place...');
